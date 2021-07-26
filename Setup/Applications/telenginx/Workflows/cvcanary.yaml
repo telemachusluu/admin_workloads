@@ -87,18 +87,6 @@ phases:
   provisionNodes: false
   serviceName: cvdeploy
   statefulSet: false
-- type: KUBERNETES
-  computeProviderName: teleharnessaws1
-  daemonSet: false
-  infraDefinitionName: teleprometheus
-  name: Phase 3
-  phaseSteps:
-  - type: K8S_PHASE_STEP
-    name: Deploy
-    stepsInParallel: false
-  provisionNodes: false
-  serviceName: cvdeploy
-  statefulSet: false
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: teleharnessaws1
@@ -143,20 +131,6 @@ rollbackPhases:
   - type: K8S_PHASE_STEP
     name: Wrap Up
     phaseStepNameForRollback: Wrap Up
-    stepsInParallel: false
-  provisionNodes: false
-  serviceName: cvdeploy
-  statefulSet: false
-- type: KUBERNETES
-  computeProviderName: teleharnessaws1
-  daemonSet: false
-  infraDefinitionName: teleprometheus
-  name: Rollback Phase 3
-  phaseNameForRollback: Phase 3
-  phaseSteps:
-  - type: K8S_PHASE_STEP
-    name: Deploy
-    phaseStepNameForRollback: Deploy
     stepsInParallel: false
   provisionNodes: false
   serviceName: cvdeploy
