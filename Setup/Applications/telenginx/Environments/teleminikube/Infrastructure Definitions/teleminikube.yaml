@@ -5,5 +5,5 @@ deploymentType: KUBERNETES
 infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: teleharnessaws1
-  namespace: teletest
+  namespace: teletest2
   releaseName: release-${infra.kubernetes.infraId}
