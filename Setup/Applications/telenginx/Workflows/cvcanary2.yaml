@@ -80,24 +80,6 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
-    steps:
-    - type: PROMETHEUS
-      name: Prometheus
-      properties:
-        analysisServerConfigId: OApchYn8T7OY7BUeH6Kwvg
-        analysisTolerance: LOW
-        comparisonStrategy: COMPARE_WITH_CURRENT
-        customThresholdRefId: 6ff19c7609914163adf57d35039e6c12
-        timeDuration: 5
-        timeSeriesToAnalyze:
-        - metricName: normal_call
-          metricType: THROUGHPUT
-          txnName: custom
-          url: io_harness_custom_metric_normal_call{kubernetes_pod_name="$hostName"}
-        - metricName: error_call
-          metricType: ERROR
-          txnName: custom
-          url: io_harness_custom_metric_error_call{kubernetes_pod_name="$hostName"}
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
